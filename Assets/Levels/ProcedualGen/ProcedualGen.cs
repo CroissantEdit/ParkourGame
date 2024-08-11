@@ -17,8 +17,8 @@ public class ProcedualGen : MonoBehaviour
 
     void SpawnRoom()
     {
-        int randomIndex = Random.Range(0, 4);   
-        GameObject selectedRoom;
+        int randomIndex = Random.Range(0, 4);   // create a integer that randomize 4 numbers 
+        GameObject selectedRoom;  // create a new gameobject variable 
 
         if (randomIndex == 0)
         {
@@ -37,8 +37,6 @@ public class ProcedualGen : MonoBehaviour
             selectedRoom = Room3;
         }
 
-        Instantiate(selectedRoom, SpawnPoint.position, Quaternion.identity);
-
-        
+        Instantiate(selectedRoom, SpawnPoint.position, Quaternion.identity); // makes a copy of the prefabs of the selected room, put the selected room on the spawnpoint position, and turn off rotation
     }
 }
